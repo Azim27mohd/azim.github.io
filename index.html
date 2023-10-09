@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="bg-blue-500 p-4">
+        <div class="container mx-auto">
+            <ul class="flex space-x-4">
+                <li class="cursor-pointer"><a href="#weight">Weight</a></li>
+                <li class="cursor-pointer"><a href="#distance">Distance</a></li>
+                <li class="cursor-pointer"><a href="#temperature">Temperature</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mx-auto p-8">
+        <section id="weight">
+            <h2 class="text-2xl font-semibold mb-4">Weight Conversion</h2>
+            <form id="weightForm">
+                <div class="flex space-x-4">
+                    <div class="flex-1">
+                        <label for="weightInput">Enter Value:</label>
+                        <input type="number" id="weightInput" class="w-full p-2 border rounded" placeholder="Enter a value">
+                    </div>
+                    <div class="flex-1">
+                        <label for="weightUnitFrom">From:</label>
+                        <select id="weightUnitFrom" class="w-full p-2 border rounded">
+                            <option value="lb">Pounds (lb)</option>
+                            <option value="kg">Kilograms (kg)</option>
+                        </select>
+                    </div>
+                    <div class="flex-1">
+                        <label for="weightUnitTo">To:</label>
+                        <select id="weightUnitTo" class="w-full p-2 border rounded">
+                            <option value="lb">Pounds (lb)</option>
+                            <option value="kg">Kilograms (kg)</option>
+                        </select>
+                    </div>
+                    <div class="flex-1">
+                        <button type="button" onclick="convertWeight()" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Convert</button>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <p class="font-semibold">Result:</p>
+                    <p id="weightResult">Conversion result will be displayed here</p>
+                </div>
+            </form>
+        </section>
+
+        <section id="distance">
+            <h2 class="text-2xl font-semibold mb-4">Distance Conversion</h2>
+            <form id="distanceForm">
+                <div class="flex space-x-4">
+                    <div class="flex-1">
+                        <label for="distanceInput">Enter Value:</label>
+                        <input type="number" id="distanceInput" class="w-full p-2 border rounded" placeholder="Enter a value">
+                    </div>
+                    <div class="flex-1">
+                        <label for="distanceUnitFrom">From:</label>
+                        <select id="distanceUnitFrom" class="w-full p-2 border rounded">
+                            <option value="mi">Miles (mi)</option>
+                            <option value="km">Kilometers (km)</option>
+                        </select>
+                    </div>
+                    <div class="flex-1">
+                        <label for="distanceUnitTo">To:</label>
+                        <select id="distanceUnitTo" class="w-full p-2 border rounded">
+                            <option value="mi">Miles (mi)</option>
+                            <option value="km">Kilometers (km)</option>
+                        </select>
+                    </div>
+                    <div class="flex-1">
+                        <button type="button" onclick="convertDistance()" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Convert</button>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <p class="font-semibold">Result:</p>
+                    <p id="distanceResult">Conversion result will be displayed here</p>
+                </div>
+            </form>
+        </section>
+
+        <section id="temperature">
+            <h2 class="text-2xl font-semibold mb-4">Temperature Conversion</h2>
+            <form id="temperatureForm">
+                <div class="flex space-x-4">
+                    <div class="flex-1">
+                        <label for="temperatureInput">Enter Value:</label>
+                        <input type="number" id="temperatureInput" class="w-full p-2 border rounded" placeholder="Enter a value">
+                    </div>
+                    <div class="flex-1">
+                        <label for="temperatureUnitFrom">From:</label>
+                        <select id="temperatureUnitFrom" class="w-full p-2 border rounded">
+                            <option value="celsius">Celsius (°C)</option>
+                            <option value="fahrenheit">Fahrenheit (°F)</option>
+                        </select>
+                    </div>
+                    <div class="flex-1">
+                        <label for="temperatureUnitTo">To:</label>
+                        <select id="temperatureUnitTo" class="w-full p-2 border rounded">
+                            <option value="celsius">Celsius (°C)</option>
+                            <option value="fahrenheit">Fahrenheit (°F)</option>
+                        </select>
+                    </div>
+                    <div class="flex-1">
+                        <button type="button" onclick="convertTemperature()" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Convert</button>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <p class="font-semibold">Result:</p>
+                    <p id="temperatureResult">Conversion result will be displayed here</p>
+                </div>
+            </form>
+        </section>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+

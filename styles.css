@@ -1,0 +1,77 @@
+/* Centering content */
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+/* Navbar styles */
+nav {
+    background-color: #3498db;
+    color: white;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Section styles */
+section {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Form styles */
+form {
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Result styles */
+.font-semibold {
+    font-weight: bold;
+}
+
+#weightResult,
+#distanceResult,
+#temperatureResult {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 18px;
+}
